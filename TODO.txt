@@ -1,0 +1,36 @@
+--Feel free to contribute--
+
+||  TO DO:  ||
+  
+1. Hover context menus for each tower in the shop -- displaying cost, sell price, and other stats
+    - This would apply when you hover over any option in the shop and should appear next to the given option
+    - Also when you hover over a cell with a tower on it, it should display a small menu near it with some info about its stats and upgrades
+
+2. Canvas for smooth image translation and rotation, projectiles, plus additional grid overlay for onclicks
+    - Try out Fabric.js for easy canvas implementation or other canvas-focused js engines
+
+3. REBALANCING THE GAME 
+    - Vehicles should take away more cleanliness
+    - Garbage trucks are good but we should include more variety in the early-game
+    - The only real "difficult" vehicle is the garbage truck
+    - HUGE difficulty gap between levels 24 and 25, make the ones leading up to 25 more difficult as well
+    - Make upgrades more enticing -- there's no real motivation to pick them over buying a next-level tower yet
+
+4. Re-skinning the game to comply with new prompt (the wifi thing -- we gotta collectively brainstorm about that)
+
+5. Add various new features (brainstorm -- we have time now, but don't procrastinate)
+
+6. Maybe create algorithm for random map generation (in addition to the 4 premade maps of course)
+
+
+  
+||  LIST O' BUGS: ||
+
+1. Random game freezes (temporarily) -- likely due to intervals overlapping or something. We can mathematically analyze this.
+    - Also causes fewer cars that round for whatever reason and does not stop energy production
+
+2. Upgrades for towers aren't working
+    - I can only confirm this for defensive towers as upgrading their damage yielded no damage increases
+    
+3. For some reason the identifier in the shop doesn't work correctly for the oil production tower
+    - It displays as [Object Object]

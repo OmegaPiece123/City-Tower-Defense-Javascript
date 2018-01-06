@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" href="favicon.ico">
+		<title>City Tower Defense</title>
+		<link rel="stylesheet" href="gameStyle.css">
+		<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+		<script>
+		/*global gameScreen Menu mainMenu preLoad shopMenu*/ 
+			var SCREEN_WIDTH = 800;
+			var SCREEN_HEIGHT = 800;
+			function initialize()
+			{
+				gameScreen = document.getElementById("contentFrame");
+				gameScreen.style.width = SCREEN_WIDTH + "px";
+				gameScreen.style.height = SCREEN_HEIGHT + "px";
+				levelCountBox = document.getElementById("levelCounter");
+				levelNum = document.getElementById("levelNumber");
+				
+				testBox = document.getElementById("TEST");
+				
+				preLoad(); //preLoad All Images
+				mainMenu = new Menu("Main Menu", "main");
+				shopMenu = new Menu("SHOP", "shop");
+			}
+		</script>
+		<script type = "text/javascript" src = "FrontEndGrid.js"></script>
+		<script type = "text/javascript" src = "Objects.js"></script>
+		<script type = "text/javascript" src = "vehicles.js"></script>
+		<script type = "text/javascript" src = "Towers.js"></script>
+		<script type = "text/javascript" src = "Maps.js"></script>
+		<script type = "text/javascript" src = "Grid.js"></script>
+		
+		<script type = "text/javascript" src = "levels.js"></script>
+		<script type = "text/javascript" src = "preLoader.js"></script>
+		
+	</head>
+	<body onload = "initialize();">
+		<button id = "move" disabled = true class = "move" onclick = "start(this);">MOVE</button>
+		<button id = "pause" disabled = true class = "pause" onclick = "alert('Click OK to resume.');">PAUSE</button>
+		<button id = "quit" disabled = true class = "quit" onclick = "quitPrompt(true);">QUIT</button>
+		<h1>City Tower Defense <span class = "beta">[beta]</span></h1>
+		<h4 id = "levelCounter" style = "display:none;">Level: <span id = "levelNumber"></span></h4>
+		<div id = "contentFrame">
+		</div>
+		<div id = "infoBox"></div>
+		
+		
+		<div id = "TEST"></div>
+	</body>
+	<script type = "text/javascript" src = "Game.js"></script>
+</html>
